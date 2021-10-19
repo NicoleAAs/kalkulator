@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Valuta Kalkulaator</title>
+    <script src="javak.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Vaaluta kalkulaator var 1</h1>
+<form name="var1">
+   <label for="kogus">Sisesta kogus:</label>
+
+    <input type="number" name="kogus" id="kogus"> euro
+    <br>
+    <fieldset>
+    <legend>Vali valuuta:</legend>
+
+    <input type="radio" name="valuuta1" id="dollar" value="dollar" onchange="radiochange(event)">
+    <label for="dollar">Dollar</label>
+        <br>
+        <input type="radio" name="valuuta1" id="rub" value="rub" onchange="radiochange(event)">
+        <label for="rub">Rouble</label>
+<br>
+        <input type="radio" name="valuuta1" id="kroon" value="kroon" onchange="radiochange(event)">
+        <label for="kroon">Rootsi Kroon</label>
+<br>
+        <input type="radio" name="valuuta1" id="frank" value="frank" onchange="radiochange(event)">
+        <label for="frank">Sveitsi Frank</label>
+<br>
+
+    </fieldset>
+    <div id="vastus">Siia tuleb vastus..</div>
+
+</form>
+<!--<img src="pust.png" alt="pilt" id="pilt">-->
+<h1>Vaaluta kalkulaator var 2</h1>
+
+<form name="var2">
+    <label for="kogus2">Sisesta kogus:</label>
+    <input type="number" name="kogus2" id="kogus2"> euro
+    <br><br>
+    <select name="valuuta2" onchange="selectOptionchange(event)">
+        <option value=""></option>
+        <option value="dollar">Dollar</option>
+        <option value="kroon">Rootsi Kroon</option>
+        <option value="frank">Sveitsi Frank</option>
+        <option value="rub">Rouble</option>
+    </select>
+    <div id="vastus2">Siia tuleb vastus..</div>
+
+</form>
+
+<h1>Vaaluta kalkulaator var 3</h1>
+
+<form name="var3">
+    <label for="kogus3">Sisesta kogus:</label>
+    <input type="number" name="kogus3" id="kogus3"> euro
+    <br><br>
+
+    <label for="valuutanimi">Sisesta valuuta(dollar, rouble, frank, kroon)</label>
+    <input type="text" name="valuutanimi" id="valuutanimi" placeholder="Valuuta nimetus" >
+    <input type="button" onclick="inputValutaText()" value="OK">
+    <div id="vastus3">Siia tuleb vastus..</div>
+</form>
+
+<p><a href="https://github.com/NicoleAAs/calculator">GitHub</a></p>
+<h1>Kalkulaator</h1>
+
+
+<table border="1">
+    <tr>
+        <td colspan="3"><input type="text" id="result"/></td>
+
+        <td><input type="button" value="Clear" onclick="clear()"/></td>
+    </tr>
+    <tr>
+
+        <td><input type="button" value="1" onclick="resultati('1')"/></td>
+        <td><input type="button" value="2" onclick="resultati('2')"/></td>
+        <td><input type="button" value="3" onclick="resultati('3')"/></td>
+        <td><input type="button" value="/" onclick="resultati('/')"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="resultati('4')"/></td>
+        <td><input type="button" value="5" onclick="resultati('5')"/></td>
+        <td><input type="button" value="6" onclick="resultati('6')"/></td>
+        <td><input type="button" value="-" onclick="resultati('-')"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="resultati('7')"/></td>
+        <td><input type="button" value="8" onclick="resultati('8')"/></td>
+        <td><input type="button" value="9" onclick="resultati('9')"/></td>
+        <td><input type="button" value="+" onclick="resultati('+')"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="0" onclick="resultati('0')"/></td>
+        <td><input type="button" value="." onclick="resultati('.')"/></td>
+        <td><input type="button" value="=" onclick="rovno()"/></td>
+        <td><input type="button" value="*" onclick="resultati('*')"/></td>
+    </tr>
+</table>
+
+</body>
+</html>
